@@ -10,3 +10,5 @@ This is an early release. So far it has been tested on a LG Nexus 4 and gives th
  - Trading on all tradable pairs
 
 About licencing : work in progress ! Right now, consider it as GPL v3.
+
+Additional infos and an action video here : http://www.antoineviau.com/kraken/index.html
