@@ -1,0 +1,33 @@
+{
+  "name": "kraken",
+  "version": "1.0.0",
+  "description": "Kraken: An Ionic project",
+  "dependencies": {
+    "gulp": "^3.5.6",
+    "gulp-sass": "^0.7.1",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0"
+  },
+  "devDependencies": {
+    "bower": "~1.3.12",
+    "gulp-util": "~3.0.1",
+    "shelljs": "~0.3.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-glob-html": "~0.2.2",
+    "gulp": "~3.8.10",
+    "gulp-concat": "~2.4.2",
+    "gulp-sass": "~0.7.3",
+    "gulp-minify-css": "~0.3.11",
+    "gulp-rename": "~1.2.0",
+    "gulp-uglify": "~1.0.2",
+    "gulp-inject": "~1.0.2",
+    "gulp-if": "~1.2.5",
+    "gulp-preprocess": "~1.1.1",
+    "del": "~1.1.0",
+    "gulp-jshint": "~1.9.0",
+    "yargs": "~1.3.3"
+  }
+}

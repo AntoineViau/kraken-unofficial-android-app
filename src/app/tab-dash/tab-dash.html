@@ -1,0 +1,63 @@
+<ion-view title="Dashboard" >
+    <ion-content class="padding">
+
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="update(true)">
+        </ion-refresher>
+
+        <!--
+        Error message
+        -->
+        <div ng-show="error !== ''">
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <div class="assertive"><b>Error ! {{error}}</b></div>
+                    <a class="button button-full button-positive ion-chevron-right icon-right" href="#/tab/parameters">
+                        Go to parameters...
+                    </a>            
+                </div>
+            </div>
+        </div>
+
+        <!--
+        Balances
+        -->
+        <div ng-show="error == ''" id="balances">
+            <ul class="list">
+                <div class="item item-divider">
+                    Your balances :
+                </div>
+                <li class="item" ng-repeat="(currency, amount) in balances">
+                    <div class="row">
+                        <div class="col">{{currency}}</div><div class="col">{{amount}}</div>
+                        <div></div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="row">
+                        <div class="col">Trade balance</div><div class="col">{{tradeBalance}}</div>
+                        <div></div>
+                    </div>
+                </li>
+            </ul>            
+
+            <!--
+            History button
+            -->
+            <a class="button button-full button-positive ion-chevron-right icon-right" href="#/tab/history">
+                History
+            </a>            
+
+            <!--
+            Orders button
+            -->
+            <a class="button button-full button-positive ion-chevron-right icon-right" href="#/tab/orders">
+                Open orders
+            </a>            
+
+
+        </div>
+
+    </ion-content>
+</ion-view>

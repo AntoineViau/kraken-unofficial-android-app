@@ -1,0 +1,17 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Select tradable pair</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+
+            <label ng-repeat="(pairId, pairInfos) in trade.tradablePairs" class="item item-radio" ng-click="selectTradablePairDone(true)">
+                <input type="radio" name="group" ng-model="trade.tradablePairId" value="{{pairId}}" />
+                <div class="item-content">{{pairInfos| tradablePairReadable}}</div><i class="radio-icon ion-checkmark"></i>
+            </label>        
+        </div>
+
+
+
+    </ion-content>
+</ion-modal-view>

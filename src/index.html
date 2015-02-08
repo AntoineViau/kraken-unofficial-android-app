@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Kraken</title>
+
+        <!-- @if NODE_ENV='dev' -->
+        <link href="vendor/ionic/css/ionic.css" rel="stylesheet">
+        <link href="app/**/*.css" rel="stylesheet">
+
+        <script src="vendor/ionic/js/ionic.bundle.min.js"></script>
+        <script src="vendor/cryptojs/rollups/sha256.js"></script>
+        <script src="vendor/cryptojs/rollups/sha512.js"></script>
+        <script src="vendor/cryptojs/rollups/hmac-sha512.js"></script>
+        <script src="vendor/cryptojs/rollups/md5.js"></script>
+        <script src="vendor/cryptojs/components/core.js"></script>
+        <script src="vendor/cryptojs/components/enc-base64.js"></script>
+        <script src="app/*.js"></script>
+        <script src="app/*/*.js"></script>
+        <script src="core/services/*/*.js"></script>
+        <script src="core/filters/*.js"></script>
+        <!-- @endif -->
+
+        <!-- @if NODE_ENV='production' -->
+        <link href="css/kraken.css" rel="stylesheet">
+        <script src="js/kraken.js"></script>
+        <!-- @endif -->        
+
+        <script src="cordova.js"></script>
+
+    </head>
+
+    <body ng-app="kraken" animation="slide-left-right-ios7">
+
+        <div>
+            <ion-nav-bar class="bar-stable nav-title-slide-ios7 bar-positive" >
+                <ion-nav-back-button class="button-icon ion-arrow-left-c">
+                </ion-nav-back-button>
+            </ion-nav-bar>
+
+            <ion-nav-view>
+                <!-- inject:partials:html -->
+                <!-- contents of html partials will be injected here -->
+                <!-- endinject -->
+            </ion-nav-view>
+        </div>
+    </body>
+</html>

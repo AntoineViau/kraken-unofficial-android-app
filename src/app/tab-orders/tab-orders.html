@@ -1,0 +1,40 @@
+<ion-view title="Orders">
+    <ion-content class="padding">
+
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="updateOrders(true)">
+        </ion-refresher>
+
+        <div class="list">
+            <div class="item item-divider">
+                Open orders
+            </div>
+            <div ng-show="noOpenOrders === true" class="item">
+                There are no open orders
+            </div>
+            <div ng-repeat="order in orders.openOrders">
+                <div class="item">
+                    {{order.openDateTime|date:'dd/MM/yyyy HH:mm'}}
+                    <br />
+                    {{order.descr.order}}
+                </div>
+            </div>
+            <div class="item item-divider">
+                Closed orders
+            </div>
+            <div ng-show="noClosedOrders === true" class="item">
+                There are no closed orders
+            </div>
+            <div ng-repeat="order in orders.closedOrders">
+                <div class="item">
+                    {{order.closedDateTime|date:'dd/MM/yyyy HH:mm'}}
+                    <br />
+                    {{order.descr.order}}
+                </div>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>

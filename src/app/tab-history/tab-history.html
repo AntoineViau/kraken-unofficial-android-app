@@ -1,0 +1,22 @@
+<ion-view title="History">
+    <ion-content class="padding">
+
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="updateHistory(true)">
+        </ion-refresher>
+
+        <div class="list">
+            <div ng-repeat="operation in history.operations">
+                <div class="item item-divider">
+                    {{operation.datetime|date:'dd/MM/yyyy HH:mm'}} - {{operation.type}} {{operation.ordertype}} {{operation.pair|tradablePairReadable}}
+                </div>
+                <div class="row">
+                    <div class="col">Volume:<br />{{operation.vol}}</div>
+                    <div class="col">Cost:<br />{{operation.cost}}</div>
+                    <div class="col">Fee:<br />{{operation.fee}}</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

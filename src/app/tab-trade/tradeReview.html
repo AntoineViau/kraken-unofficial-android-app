@@ -1,0 +1,46 @@
+<ion-view title="Review order" id="reviewOrder">
+    <ion-content class="padding">
+
+        <label class="item item-input item-divider">
+            <div class="row">
+                <div class="col">
+                    {{review.type}}
+                </div>
+                <div class="col">
+                    {{review.volume}} 
+                </div>
+                <div class="col">
+                    {{review.tradedPair.base|assetReadable}} 
+                </div>
+                <div class="col">@{{review.orderType}} 
+                </div>
+            </div>
+        </label>
+
+        <label class="item item-input">
+            <div class="row">
+                <div class="col col-67">Price</div>
+                <div class="col col-33 right">{{review.price}} {{review.tradedPair.quote|assetReadable}}</div>
+            </div>
+        </label>
+
+        <label class="item item-input item-divider">
+            <div class="row">
+                <div class="col col-67">Total cost</div>
+                <div class="col col-33 right">{{review.totalCost}} {{review.tradedPair.quote|assetReadable}}</div>
+            </div>
+        </label>
+
+        <a class="button button-full button-positive" ng-click="submitOrder()">Submit order</a>
+        <a class="button button-full button-assertive" ng-click="cancelOrder()">Cancel</a>
+
+        <div ng-show="review.error !== ''">
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <div class="assertive"><b>Error ! {{review.error}}</b></div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

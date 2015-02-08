@@ -1,0 +1,32 @@
+<ion-view title="Parameters">
+    <ion-content class="padding">
+
+        <div ng-show="parameters.keysNotInitialized" class="card">
+            <div class="item item-text-wrap royal">
+                <b>You must enter your api key and your private key in order to access your Kraken data</b>
+            </div>
+        </div>
+
+        <ul class="list">
+            <li class="item">
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Put your API Key here" ng-model="parameters.apiKey" ng-change="onApiKeyChange()" />
+                    </label>
+                    <label class="item item-input">
+                        <input type="text" placeholder="Put your private key here" ng-model="parameters.privateKey" ng-change="onPrivateKeyChange()" />
+                    </label>
+                </div>
+                <button class="button button-full button-positive" ng-click="scanKeys()">
+                    Scan them ! 
+                </button>
+                <button ng-show="keysNowInitialized()" class="button button-full button-positive" ng-click="testKeys()" >
+                    Test them ! 
+                </button>
+            </li>
+
+        </ul>
+
+    </ion-content>
+</ion-view>
+

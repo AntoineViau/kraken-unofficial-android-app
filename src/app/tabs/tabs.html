@@ -1,0 +1,19 @@
+<ion-tabs class="tabs-positive tabs-icon-only" ng-controller="tabsController" id="tabsContainer">
+
+    <ion-tab title="Dashboard" icon="icon ion-home" ng-click="goTo('tab.dash')">
+        <ion-nav-view name="tab-dash"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="trade" icon="icon ion-social-bitcoin" ng-click="goTo('tab.trade')">
+        <ion-nav-view name="tab-trade"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Parameters" icon="icon ion-gear-b" ng-click="goTo('tab.parameters')" on-deselect="saveConfig()">
+        <ion-nav-view name="tab-parameters"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Informations" icon="icon ion-android-information" ng-click="goTo('tab.informations')" >
+        <ion-nav-view name="tab-informations"></ion-nav-view>
+    </ion-tab>
+
+</ion-tabs>

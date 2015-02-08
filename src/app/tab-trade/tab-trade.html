@@ -1,0 +1,49 @@
+<ion-view title="New order">
+    <ion-content class="padding">
+
+        <div class="list" id="trade">
+
+            <div class="button-bar item">
+                <a class="button" ng-class="{'button-positive': isBuying}" ng-click="setBuying()">Buy</a>
+                <a class="button" ng-class="{'button-positive': isSelling}" ng-click="setSelling()">Sell</a>
+            </div>
+
+            <div class="button-bar item">
+                <a class="button" ng-class="{'button-positive': isLimit}" ng-click="setLimit()">Limit</a>
+                <a class="button" ng-class="{'button-positive': isMarket}" ng-click="setMarket()">Market</a>
+            </div>
+
+            <div class="item">
+                <button class="button button-full button-positive" ng-click="selectTradablePair()">
+                    <span ng-show="trade.tradablePair">
+                        {{trade.tradablePair|tradablePairReadable}} ({{trade.tradablePairValue}})
+                    </span>
+                    <span ng-hide="trade.tradablePair">
+                        Select a tradable pair...
+                    </span>
+                </button>
+            </div>
+
+            <div ng-show="trade.tradablePair">
+
+                <label class="item item-input">
+                    <span class="input-label">Amount <span ng-show="trade.tradablePair">({{trade.tradablePair.base|assetReadable}})</span></span>
+                    <input type="number" placeholder="Amount" ng-change="onVolumeChange()" ng-model="trade.volume">
+                </label>
+
+                <label ng-show="isLimit != ''" class="item item-input">
+                    <span class="input-label">Price <span ng-show="trade.tradablePair">({{trade.tradablePair.quote|assetReadable}})</span></span>
+                    <input type="number" placeholder="{{pricePlaceHolder}}" ng-change="onPriceChange()" ng-model="trade.price">
+                </label>
+
+                <label ng-show="trade.totalCost && trade.totalCost > 0"class="item item-divider item-input">
+                    <span class="input-label" disabled>Total cost <span ng-show="trade.tradablePair">({{trade.tradablePair.quote|assetReadable}})</span></span>
+                    {{trade.totalCost}}
+                </label>
+            </div>
+        </div>
+
+        <a ng-show="trade.totalCost > 0" class="button button-full button-dark" ng-click="goToReview()">Review order</a>
+
+    </ion-content>
+</ion-view>

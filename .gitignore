@@ -1,0 +1,10 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+hooks/
+nbproject/
+node_modules/
+platforms/
+plugins/
+www/
+src/*/file_id.diz
