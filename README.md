@@ -8,3 +8,5 @@ This is an early release. So far it has been tested on a LG Nexus 4 and gives th
  - Balances for all currencies
  - History
  - Trading on all tradable pairs
+
+About licencing : work in progress ! Right now, consider it as GPL v3.
