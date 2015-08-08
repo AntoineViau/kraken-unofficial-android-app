@@ -44,8 +44,8 @@ angular.module("kraken").factory("keysScannerService", ["$q", function ($q) {
                 if (ionic.Platform.isWebView() === true) {
                     _scan();
                 } else {
-                    _keys.apiKey = "UvmtM0UlYiatyZXUmkQMQKleSdaX8Y7Ep1xQMdFCvM6jtz/Eo2x6N1Ax";//"someFakeApiKey" + new Date() * 10;
-                    _keys.privateKey = "/MzqTNFbcyAFClnlc5/9a0EDwYPlrlTjAQnJ1asO8n1X2CCWYryF2/SFmxk7UVVqT0/UdTjEtpXqQ3AAeAdCfw==";//"someFakePrivateKey" + new Date() * 10;
+                    _keys.apiKey = "";
+                    _keys.privateKey = "";
                     _promiseManager.resolve(_keys);
                 }
                 return _promiseManager.promise;
