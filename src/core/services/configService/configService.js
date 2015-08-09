@@ -5,17 +5,18 @@
  */
 angular.module("kraken").factory("configService", ["$q", function ($q) {
 
-        var _apiKey = null;
-        var _privateKey = null;
+        var _apiKey = '';
+        var _privateKey = '';
         var _loaded = false;
 
         _service = {
             setApiKey: function (apiKey) {
-                _apiKey = apiKey;
+                _apiKey = '' || apiKey;
+                console.log('_apiKey = ' + _apiKey);
             }
             ,
             setPrivateKey: function (privateKey) {
-                _privateKey = privateKey;
+                _privateKey = '' || privateKey;
             }
             ,
             getApiKey: function () {
@@ -36,6 +37,7 @@ angular.module("kraken").factory("configService", ["$q", function ($q) {
                 console.log("configService.load()");
                 var promiseManager = $q.defer();
                 _apiKey = window.localStorage.getItem('apiKey');
+                console.log('loaded _apiKey = ' + _apiKey);
                 _privateKey = window.localStorage.getItem('privateKey');
                 promiseManager.resolve();
                 return promiseManager.promise;
