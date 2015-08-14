@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.antoineviau.kraken" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Kraken</name>
+  <name>Kraken Unofficial App For Android</name>
   <description>
-        Kraken for Android
+        Kraken Unofficial App for Android
     </description>
   <author email="antoine.viau@gmail.com" href="http://www.antoineviau.com/">
       Antoine Viau
