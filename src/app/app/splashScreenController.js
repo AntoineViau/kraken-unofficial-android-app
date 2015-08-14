@@ -11,7 +11,7 @@ angular.module('kraken.controllers')
             console.log("Wait a little bit...");
             return $timeout(function () {
                 console.log("wait done");
-            }, 1000);
+            }, 500);
         };
 
         var _checkConnection = function () {
@@ -60,10 +60,10 @@ angular.module('kraken.controllers')
         };
 
         _checkConnection()
-        //.then(_wait)
+        .then(_wait)
         .then(_loadConfig)
-        //.then(_wait)
+        .then(_wait)
         .then(_initialize)
-        //.then(_wait)
+        .then(_wait)
         .then(_goToDashboard);
     }]);
