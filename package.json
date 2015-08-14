@@ -31,3 +31,8 @@
     "run-release": "gulp release && ionic run",
     "run-debug": "gulp debug && ionic run"
   },
+  "cordovaPlugins": [],
+  "cordovaPlatforms": [
+    "android"
+  ]
+}
