@@ -39,31 +39,14 @@ angular.module("kraken").factory("krakenRestService", ["$http", "$q", function (
                     , params: params
                     , headers: _headers
                 })
-                /*
-                 * Encore une subtilité AngularJS ici : 
-                 * pourquoi un then() plutôt qu'un couple success/error ?
-                 * success/error retournent la promise originale du $http.
-                 * En conséquence, l'appelant chaîne depuis cette promise originale et non pas une nouvelle promise 
-                 * qui aurait été initiée par success ou error. L'appelant obtient donc des données brutes issues de
-                 * $http.get/post() et non pas des données pré-traitées par notre code.
-                 * Pour obtenir cela, il faut utiliser then() qui renvoie les données que l'on veut ou bien une nouvelle
-                 * promise.
-                 */
                 .then(
                 function (result) {
                     return result.data;
-                }
-                ,
+                },
                 function (result) {
                     return $q.reject(result);
                 }
                 );
-//            .success(function (data, status, headers, config) {
-//                return data;
-//            })
-//            .error(function (data, status, headers, config) {
-//                return data;
-//            });
 
             },
             post: function (path, params, dataAsJson) {
@@ -100,7 +83,6 @@ angular.module("kraken").factory("krakenRestService", ["$http", "$q", function (
                 );
             }
         };
-
         return _service;
 
     }]);
