@@ -24,7 +24,10 @@
     "yargs": "~1.3.3"
   },
   "scripts": {
-    "build": "gulp",
-    "serve": "static ./www"
-  }
-}
+    "build-debug": "gulp debug",
+    "build-release": "gulp release",
+    "build-watch": "gulp",
+    "serve": "static ./www",
+    "run-release": "gulp release && ionic run",
+    "run-debug": "gulp debug && ionic run"
+  },
