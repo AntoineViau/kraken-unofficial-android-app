@@ -1,5 +1,4 @@
-# Kraken
-Welcome to the (unofficial) Kraken Android App.  
+# Kraken Unofficial Android App
 This project tries to fill the gap between Kraken.com and Android.  
 The app is built with the Ionic Framework (based itself on Cordova and AngularJS), allowing it to be ported easyly to other platforms (Windows Phone, Blackberry, iOS, etc.)
 
@@ -23,7 +22,7 @@ Then install Cordova and Ionic :
 
 Clone the repo :   
 
-    git clone https://github.com/AntoineViau/Kraken.git
+    git clone https://github.com/AntoineViau/kraken-unofficial-android-app.git
     cd Kraken
 
 Add Android platform to Ionic/Cordova :
