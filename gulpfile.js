@@ -103,6 +103,10 @@ gulp.task('release', ['clean'], function () {
     gulp.start('jsHint', 'concatAndCompactJs', 'processCss', 'processImages', 'processFonts', 'processIndexForProd');
 });
 
-gulp.task('default', function () {
+gulp.task('debug', function () {
     gulp.start('jsHint', 'copyApp', 'processImages', 'processFonts', 'processIndexForDev');
+});
+
+gulp.task('default', function () {
+    gulp.watch(['./src/*', './src/**/*'], ['debug']);
 });
